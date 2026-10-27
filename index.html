@@ -7,7 +7,63 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Easy Code DZ home">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span>EASY CODE <b>DZ</b></span>
+      </a>
+      <span class="tagline">LEARN <i>•</i> BUILD <i>•</i> GROW</span>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">RETRO ARCADE CHALLENGE</p>
+      <h1>DUCK <span>HUNT</span></h1>
+      <p class="subtitle">Take aim, hit the target, and beat your high score.</p>
+    </section>
+
+    <section class="game-shell" aria-label="Duck Hunt game">
+      <div class="hud">
+        <div class="hud-item"><span>SCORE</span><strong id="score">0000</strong></div>
+        <div class="hud-item"><span>ROUND</span><strong id="round">01</strong></div>
+        <div class="hud-item"><span>AMMO</span><strong id="ammo">10</strong></div>
+        <div class="hud-item"><span>TIME</span><strong id="time">30</strong></div>
+      </div>
+
+      <div id="game-area" class="game-area" aria-label="Game field">
+        <div class="sun"></div>
+        <div class="cloud cloud-one"></div>
+        <div class="cloud cloud-two"></div>
+        <div class="hill hill-back"></div>
+        <div class="hill hill-front"></div>
+        <div class="grass"></div>
+        <div class="ground-line"></div>
+        <div id="duck" class="duck" role="img" aria-label="Flying duck" hidden>
+          <span class="duck-wing"></span>
+          <span class="duck-body"></span>
+          <span class="duck-head"></span>
+          <span class="duck-beak"></span>
+          <span class="duck-eye"></span>
+          <span class="duck-tail"></span>
+        </div>
+        <div id="hit-flash" class="hit-flash" aria-hidden="true"></div>
+        <div class="crosshair" id="crosshair" aria-hidden="true"><span></span></div>
+        <div id="overlay" class="overlay">
+          <div class="overlay-card">
+            <p class="eyebrow">EASY CODE DZ PRESENTS</p>
+            <h2 id="overlay-title">READY, AIM…</h2>
+            <p id="overlay-text">You have 10 shots and 30 seconds. Hit as many ducks as you can!</p>
+            <button id="start-btn" class="primary-btn" type="button">Start game <span>→</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-footer">
+        <span id="status" aria-live="polite">Press Start game to begin.</span>
+        <span class="controls-hint"><span class="mouse-icon">⌖</span> Click to shoot</span>
+      </div>
+    </section>
+  </main>
   <script src="./script.js"></script>
 </body>
 </html>
